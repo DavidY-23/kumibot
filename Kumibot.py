@@ -13,7 +13,6 @@ api = tp.API(auth)
 def func():
     os.chdir('Kumiko')
     for kumiko in os.listdir('.'):
-        #api.update_status("Kumiko.")
         kumiko = random.choice(os.listdir('.'))
         api.update_with_media(kumiko, status="Kumiko Oumae")
         time.sleep(1800)
