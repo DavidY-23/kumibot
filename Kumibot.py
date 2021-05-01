@@ -2,12 +2,18 @@ import tweepy as tp
 import time
 import os
 import random
-import config
+
+from os import environ 
+
+consumer_key =        environ['consumer_key']
+consumer_secret =     environ['consumer_secret']
+access_token = environ['access_key']
+access_token_secret =  environ['access_token_secret']
 
 #credentials for Twitter
 
-auth = tp.OAuthHandler(config.consumer_key, config.consumer_secret)
-auth.set_access_token(config.access_token, config.access_token_secret)
+auth = tp.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
 api = tp.API(auth)
 
 def func():
